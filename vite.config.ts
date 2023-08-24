@@ -12,7 +12,7 @@ export default defineConfig({
         enabled: true // <-- this
       },
       dts: 'src/auto-imports.d.ts',
-      imports: ['vue'],
+      imports: ['vue', 'vue-router'],
 
       resolvers: [ElementPlusResolver()]
     }),
