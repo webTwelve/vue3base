@@ -4,3 +4,4 @@ declare module '*.vue' {
   const componentOptions: ComponentOptions
   export default componentOptions
 }
+declare module 'pinia-plugin-persist'

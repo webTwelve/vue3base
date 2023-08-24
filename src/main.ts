@@ -1,4 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/index'
-createApp(App).use(router).mount('#app')
+import pinia from '@/store/index'
+import 'normalize.css'
+import '@/assets/style/style.css'
+const app = createApp(App)
+app.use(pinia)
+app.use(router)
+app.mount('#app')
