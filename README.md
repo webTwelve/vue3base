@@ -1,3 +1,7 @@
+## 注意：
+
+已自动导入Vue、Vue-router组合式API和Elment-plus组件库，直接使用即可~~
+
 ## 安装步骤
 
 ```tex
