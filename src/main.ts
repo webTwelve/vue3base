@@ -7,7 +7,5 @@ import '@/assets/style/base.less'
 const app = createApp(App)
 app.use(pinia)
 app.use(router)
-app.directive('v-copy', (el: HTMLElement) => {
-  console.log(el)
-})
+
 app.mount('#app')
