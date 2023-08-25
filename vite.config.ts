@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import path from 'path'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -28,11 +29,13 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       less: {
-        math: 'always', // 括号内才使用数学计算
-        globalVars: {
-          // 全局变量
-          default: '#000'
-        }
+        modifyVars: {
+          hack: `true; @import (reference) "${path.resolve(
+            __dirname,
+            'src/assets/style/base.less'
+          )}";`
+        },
+        javascriptEnabled: true
       }
     }
   }

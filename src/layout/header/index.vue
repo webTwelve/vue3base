@@ -8,7 +8,7 @@
 
 <style lang="less" scoped>
 .el-header {
-  background-color: #c6e2ff;
+  background-color: @default;
 }
 .header {
   width: 100%;
