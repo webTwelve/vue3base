@@ -10,8 +10,16 @@
     "prettier": "prettier --write .",
     "preinstall": "node ./pre-commit.js",
     "postinstall": "husky install",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint": "vue-tsc --noEmit --skipLibCheck && eslint --ext .js,.vue,.ts, --ignore-path .gitignore . --fix",
     "pre-lint": "yarn run prettier & yarn run lint"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "npm run lint"
+    ]
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
