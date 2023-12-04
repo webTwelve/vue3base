@@ -8,7 +8,8 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "prettier": "prettier --write .",
-    "prepare": "husky install & node ./pre-commit.js",
+    "preinstall": "node ./pre-commit.js",
+    "postinstall": "husky install",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "pre-lint": "yarn run prettier & yarn run lint"
   },
