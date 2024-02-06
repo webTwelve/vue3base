@@ -1,5 +1,7 @@
 <template>
-  <div class="user-content"></div>
+  <div>
+    <h1>活动管理</h1>
+  </div>
 </template>
 
 <script setup lang="ts"></script>

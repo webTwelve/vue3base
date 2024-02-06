@@ -1,6 +1,6 @@
 ## 注意：
 
-已自动导入Vue、Vue-router组合式API和Element-plus组件库，直接使用即可~~
+已自动导入 Vue、Vue-router 组合式 API 和 Element-plus 组件库，直接使用即可~~
 
 ## 安装步骤
 

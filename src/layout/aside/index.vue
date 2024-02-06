@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-menu
-      default-active="3"
+      :default-active="menuActive"
       class="el-menu-vertical-demo"
       :collapse="isCollapse"
       @open="handleOpen"
@@ -10,21 +10,14 @@
       <div class="logo flex-center">
         <img src="@/assets/vue.svg" alt="" />
       </div>
-      <el-menu-item index="1">
-        <i-ep-notification class="v-icon" />
-        <template #title>工作台</template>
-      </el-menu-item>
-      <el-menu-item index="2">
-        <i-ep-iceCreamRound class="v-icon" />
-        <template #title>活动管理</template>
-      </el-menu-item>
-      <el-menu-item index="3">
-        <i-ep-user class="v-icon" />
-        <template #title>用户管理</template>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <i-ep-setting class="v-icon" />
-        <template #title>系统设置</template>
+      <el-menu-item
+        :index="item.url"
+        v-for="item in menu"
+        :key="item.url"
+        @click="jump(item)"
+      >
+        <i class="iconfont" :class="item.icon"></i>
+        <template #title>{{ item.title }}</template>
       </el-menu-item>
       <div class="flex-center check-wrap">
         <i-ep-expand
@@ -39,7 +32,13 @@
 </template>
 
 <script setup lang="ts">
+import { menu } from './data'
+import type { IMenu } from './data'
+const route = useRoute()
+const router = useRouter()
 const isCollapse = ref(false)
+const menuActive = ref(route.path)
+
 const changeCollapse = (collapse: boolean) => {
   isCollapse.value = collapse
 }
@@ -49,9 +48,16 @@ const handleOpen = (key: string, keyPath: string[]) => {
 const handleClose = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
+const jump = (item: IMenu) => {
+  router.push(item.url)
+}
 </script>
 
 <style lang="less" scoped>
+.iconfont {
+  margin-right: 10px;
+  font-size: 22px;
+}
 .logo {
   width: 100%;
   height: 60px;
