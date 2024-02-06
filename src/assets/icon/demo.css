@@ -2,8 +2,7 @@
 @font-face {
   font-family: 'iconfont logo';
   src: url('https://at.alicdn.com/t/font_985780_km7mi63cihi.eot?t=1545807318834');
-  src:
-    url('https://at.alicdn.com/t/font_985780_km7mi63cihi.eot?t=1545807318834#iefix')
+  src: url('https://at.alicdn.com/t/font_985780_km7mi63cihi.eot?t=1545807318834#iefix')
       format('embedded-opentype'),
     url('https://at.alicdn.com/t/font_985780_km7mi63cihi.woff?t=1545807318834')
       format('woff'),
@@ -123,15 +122,9 @@
   font-size: 42px;
   margin: 10px auto;
   color: #333;
-  -webkit-transition:
-    font-size 0.25s linear,
-    width 0.25s linear;
-  -moz-transition:
-    font-size 0.25s linear,
-    width 0.25s linear;
-  transition:
-    font-size 0.25s linear,
-    width 0.25s linear;
+  -webkit-transition: font-size 0.25s linear, width 0.25s linear;
+  -moz-transition: font-size 0.25s linear, width 0.25s linear;
+  transition: font-size 0.25s linear, width 0.25s linear;
 }
 
 .icon_lists .icon:hover {
