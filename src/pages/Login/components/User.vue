@@ -70,7 +70,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
       Cookies.set('token', 'AAAAA')
       router.push('/main')
     } else {
-      console.log('error submit1!', fields)
+      console.log('error submit!', fields)
     }
   })
 }
